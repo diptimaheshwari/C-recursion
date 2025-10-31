@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+
+int printN(int k, string C,int age, int counter = 1){
+
+    if(counter<=age){
+    
+       cout<<  C<<" "<< counter<<endl;
+         return printN(k+1, C,age,counter+1 );   
+    
+        
+   // }else{
+     //   return 0;
+    //}
+}
+return 0;
+}
+
+int main(){
+  cout<<"enter your name"<< endl;
+  string A;
+  cin>> A;
+  
+    cout<<"enter your birth year"<< endl;
+    int birthyear;
+    cin>>birthyear;
+    
+    int age = 2025-birthyear;
+    
+    int result = printN(birthyear, A, age);
+    cout<< result<<endl;
+    
+ 
+    return 0;
+}
